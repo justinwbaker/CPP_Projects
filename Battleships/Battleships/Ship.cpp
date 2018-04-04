@@ -9,7 +9,7 @@ Ship::Ship(ShipType type, int length, Direction direction, int x, int y)
 	this->x = x;
 	this->y = y;
 	for (int i = 0; i < this->length; i++) {
-		this->sunk[i] = false;
+		this->sunk.push_back(false);
 	}
 }
 

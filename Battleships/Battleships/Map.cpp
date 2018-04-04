@@ -17,14 +17,16 @@ void Map::addShip(Ship ship) {
 }
 
 string Map::toString() {
-	string returnString = "";
+	string returnString = "\t# 0 1 2 3 4 5 6 7 8 9\n\t";
 	for (int i = 0; i < 10; i++) {
+		returnString += ALPHABET[i];
+		returnString += " ";
 		for (int j = 0; j < 10; j++) {
 			returnString += this->charMap[j + i * 10];
 			returnString += " ";
 		}
 		if(i < 9)
-			returnString += "\n";
+			returnString += "\n\t";
 	}
 	return returnString;
 }

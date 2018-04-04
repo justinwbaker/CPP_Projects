@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 enum ShipType {
 	Destroyer, Cruiser, Submarine, Battleship, Aircraft
 };
@@ -11,7 +15,7 @@ private:
 	ShipType type;
 	int length;
 	int x, y;
-	bool sunk[];
+	vector<bool> sunk;
 
 public:
 	Direction direction;
